@@ -51,16 +51,15 @@ module.exports = {
         cache_busting_mode: 'none',
       },
     },
+    // Last-priority plugins
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-offline',
       options: {
         workboxConfig: {
-          globPatterns: ['/static/favicon.png'],
+          globPatterns: ['**/*icon*'],
         },
       },
     },
-    // Last-priority plugins
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
   ],
 };
