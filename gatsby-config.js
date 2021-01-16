@@ -15,6 +15,18 @@ module.exports = {
     twitter: site.twitter,
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-gtag',
+      options: {
+        trackingId: site.googleAnalyticsId,
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0,
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
+      },
+    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-svg',
@@ -23,13 +35,6 @@ module.exports = {
       options: {
         fonts: ['Abhaya Libre'],
         display: 'swap',
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: site.googleAnalyticsId,
-        respectDNT: true,
       },
     },
     'gatsby-plugin-react-helmet',
