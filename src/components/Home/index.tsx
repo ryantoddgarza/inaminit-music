@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { SEO } from '@components';
-import { HomeOuter, HomeInner, Copy } from './styled';
+import { HomeOuter, HomeInner, Copy, Logo } from './styled';
 
 const Home = () => {
   const {
@@ -24,13 +24,13 @@ const Home = () => {
       <HomeOuter>
         <HomeInner>
           <Copy>
-            <h1>Inaminit Music</h1>
+            <Logo />
             <p>Inaminit Music is an independent record label.</p>
             <p>
               <u>
                 <a href={`mailto:${email}`}>Email</a>
-              </u>{' '}
-              for licensing, press, and radio.
+              </u>
+              {' for licensing, press, and radio.'}
             </p>
           </Copy>
         </HomeInner>

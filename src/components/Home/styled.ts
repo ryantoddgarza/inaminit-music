@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { layout, typography } from '@styles';
+import SiteLogo from '@resources/images/logo.svg';
 
 const { rem, unit, breakpoint, container } = layout;
 
@@ -12,6 +13,13 @@ export const HomeInner = styled.div`
   ${typography}
 `;
 
+export const Logo = styled(SiteLogo)`
+  height: 6rem;
+  max-width: 100%;
+  margin-bottom: ${rem(unit(4))};
+  fill: ${({ theme }) => theme.colors.fg};
+`;
+
 export const Copy = styled.article`
   position: relative;
   padding: 3rem 0;
@@ -19,9 +27,5 @@ export const Copy = styled.article`
 
   @media (min-width: ${breakpoint.tablet}) {
     margin: 0 0 0 10%;
-  }
-
-  h1 {
-    margin-bottom: ${rem(unit(6))};
   }
 `;
