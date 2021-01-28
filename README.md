@@ -19,7 +19,6 @@ Directories in _src_ are aliased to `@[dirname]` in each of the following files.
 
 - _.babelrc.json_ (Babel)
 - _.eslintrc.js_ (ESLint)
-- _gatsby-node.js_ (webpack)
 - _tsconfig.json_ (TypeScript)
 
 New directories should be aliased in all of the aforementioned files. New tooling (such as Jest) may require additional resolvers. [This post](https://raulmelo.dev/blog/module-resolution-or-import-alias-the-final-guide) is a good resource for how to do so.
