@@ -1,19 +1,19 @@
 {
-  "name": "inaminitmusic",
+  "name": "inaminit-music",
   "version": "1.0.0",
   "description": "",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryantoddgarza/inaminitmusic.git"
+    "url": "git+https://github.com/ryantoddgarza/inaminit-music.git"
   },
   "keywords": [],
   "author": "Ryan Todd Garza",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryantoddgarza/inaminitmusic/issues"
+    "url": "https://github.com/ryantoddgarza/inaminit-music/issues"
   },
-  "homepage": "https://github.com/ryantoddgarza/inaminitmusic#readme",
+  "homepage": "https://github.com/ryantoddgarza/inaminit-music#readme",
   "scripts": {
     "clean": "rm -rf .cache && rm -rf public",
     "deploy": "npm run clean && gatsby build --prefix-paths",
