@@ -6,6 +6,6 @@ export const HeaderOuter = styled.header`
   z-index: 8000;
 `;
 
-export const HeaderInner = styled.header`
+export const HeaderInner = styled.div`
   ${layout.container}
 `;
