@@ -1,5 +1,4 @@
 const off = 0;
-const warn = 1;
 const error = 2;
 
 module.exports = {
@@ -28,9 +27,9 @@ module.exports = {
       'babel-module': {},
       'alias': {
         map: [
-          ['@components', './src/components'],
-          ['@resources', './src/resources'],
-          ['@styles', './src/styles'],
+          ['@components', './packages/site/src/components'],
+          ['@resources', './packages/site/src/resources'],
+          ['@styles', './packages/site/src/styles'],
         ],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },

@@ -1,19 +1,9 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
-    "sourceMap": true,
-    "jsx": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@components": ["src/components"],
-      "@resources": ["src/resources"],
-      "@styles": ["src/styles"]
-    }
-  },
-  "include": "src",
-  "exclude": ["node_modules", "public", ".cache"]
+    "jsx": "preserve"
+  }
 }
