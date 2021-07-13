@@ -1,5 +1,8 @@
-.DS_Store*
-.cache/
-.env
+*.cache/
+*.env*
 node_modules/
+package-lock.json
 public/
+
+# Preserve lock files for applications
+!packages/site/package-lock.json
