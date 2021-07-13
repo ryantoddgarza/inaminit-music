@@ -37,18 +37,28 @@ module.exports = {
         display: 'swap',
       },
     },
-    'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: '@bitpas/gatsby-plugin-seo',
       options: {
-        name: site.title,
-        short_name: site.shortName,
-        start_url: site.pathPrefix,
-        background_color: site.backgroundColor,
-        theme_color: site.themeColor,
-        display: 'minimal-ui',
-        icon: site.favicon,
-        cache_busting_mode: 'none',
+        helmet: {
+          link: [
+            {
+              rel: 'icon',
+              href: '/favicon.svg',
+              media: '(prefers-color-scheme: no-preference)',
+            },
+            {
+              rel: 'icon',
+              href: '/favicon.svg',
+              media: '(prefers-color-scheme: light)',
+            },
+            {
+              rel: 'icon',
+              href: '/favicon-inverted.svg',
+              media: '(prefers-color-scheme: dark)',
+            },
+          ],
+        },
       },
     },
     // Last-priority plugins

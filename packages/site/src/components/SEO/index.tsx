@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useLocation } from '@reach/router';
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SEO = ({
@@ -38,18 +37,30 @@ const SEO = ({
     }
   `);
 
-  const location = useLocation();
-  const { pathname } = location;
-
-  const seo = {
+  let seo = {
     siteName,
     title: title || siteName,
     type: type || 'website',
     description: description || siteDescription,
-    image: image || `${siteUrl}${siteImage}`,
-    url: `${siteUrl}${pathname}`,
+    image: image || `${siteUrl}/${siteImage}`,
+    url: siteUrl,
     author: author || siteAuthor,
   };
+
+  useEffect(() => {
+    const isClient = window !== 'undefined';
+
+    if (!isClient) {
+      return;
+    }
+
+    const pathname = isClient && window.location.pathname;
+
+    seo = {
+      ...seo,
+      url: `${siteUrl}${pathname}`,
+    };
+  });
 
   return (
     <Helmet
