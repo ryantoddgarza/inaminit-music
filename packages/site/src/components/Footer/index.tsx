@@ -23,7 +23,7 @@ const Footer = () => {
         <Column>
           <Link to="/">{<Logo /> || siteName}</Link>
         </Column>
-        <Column>make stuff</Column>
+        <Column>— make stuff</Column>
         <Column>
           {`© ${new Date().getFullYear()} ${siteName}, All Rights Reserved`}
         </Column>
