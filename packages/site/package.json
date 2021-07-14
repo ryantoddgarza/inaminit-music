@@ -12,10 +12,11 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "clean": "rm -rf .cache && rm -rf public",
+    "clean": "gatsby clean",
     "deploy": "npm run clean && gatsby build --prefix-paths",
-    "develop": "gatsby clean && gatsby develop",
-    "serve": "gatsby serve"
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "start": "npm run develop"
   },
   "dependencies": {
     "@bitpas/gatsby-plugin-seo": "^0.4.0",
